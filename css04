@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/*Theme:こもれび差し込む森の木の葉 Author:たき Description:こもれびが差し込む森の木の葉をイメージした緑色をアクセントとしたテーマ Released under the MIT License*/
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    /* Smooth公式フォント指定 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+/* ...（normalize.css続きは省略）... */
+
+/* 背景色 */
+body {
+    background: #f5f5f5;
+}
+
+/* -----aboutページのトップ画像の配置設定：ここから----- */
+figure.topimghistory {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-top: 50px;
+    width: 236px; /* 箱の大きさ調整 */
+    margin: 0px;
+    float: left;
+}
+
+figure.topimghistory:hover {
+    filter: hue-rotate(180deg);
+}
+
+figcaption {
+    font-size: 72%;
+    text-align: center;
+}
+/* -----aboutページのトップ画像の配置設定：ここまで----- */
+
+
+/* -----ブログタイトル/エントリータイトル/日付/リンク/モジュール、のフォント、下線、色、サイズ設定：ここから----- */
+.header-image-enable #blog-title #title a {
+    color: #666;
+    text-shadow: 0px 0px 0px #000;
+}
+
+#title,
+#title a,
+.header-image-enable #blog-title #blog-description,
+.entry-title,
+.entry-title a, .entry-title a:hover {
+    /* Smooth公式フォントに統一 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#title a {
+    letter-spacing: 3px;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+#title a:hover {
+    border-bottom: 1px solid #444;
+    color: #444;
+}
+
+.header-image-enable #blog-title #blog-description {
+    text-shadow: 0 0 0px #000;
+    font-weight: 500;
+    font-size: 80%;
+    color: #666;
+}
+
+.entry-title {
+    color: #444;
+}
+
+.entry-title a, .entry-title a:hover {
+    color: #444;
+    font-weight: 400;
+}
+
+.entry-title a:hover {
+    border-bottom: 1px solid #444;
+}
+
+.date a {
+    border-bottom: 1px solid #d2d7e5;
+}
+
+.hatena-module-title {
+    border-bottom: 1px solid #999;
+}
+
+.entry-content h3 {
+    border-bottom: 1px solid #999;
+}
+
+.entry-content,
+.entry-content h3,
+.entry-content a {
+    /* Smooth公式フォントに統一 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.entry-content a {
+    color: #999;
+    border-bottom: 1px solid #999;
+}
+/* -----ブログタイトル/エントリータイトル/日付/リンク/モジュール、のフォント、下線、色、サイズ設定：ここまで----- */
+
+
+/* -----写真の上下に余白設定：ここから----- */
+.entry-content img,
+.entry-content video {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+.blogiconhistory img {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.js-about-subscriber img {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.js-about-subscriber a {
+    border-bottom: 0px solid #999;
+}
+/* -----写真の上下に余白設定：ここまで----- */
+
+
+/* -----写真の上下に余白を取りたくないとき：ここから----- */
+.img-nomargin img {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+/* -----写真の上下に余白を取りたくないとき：ここまで----- */
+
+
+/* -----エントリータグの上部に余白設定：ここから----- */
+.entry-tags-wrapper {
+    margin: 5em 0 0 0;
+}
+/* -----タグの上部に余白設定：ここまで----- */
+
+
+/* ページトップへ戻るボタン */
+#pagetop {
+    position: fixed;
+    bottom: 60px;
+    right: 22px;
+    padding: 3px 3px;
+    margin-bottom: env(safe-area-inset-bottom); /* iPhone対策 */
+    color: rgba(150,150,150,0.8);
+    background-color: rgba(255,255,255,0);
+    border: 0px solid rgba(150,150,150,0.8);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 8px;
+    z-index: 10;
+}
+
+/* ページトップへ戻るボタン：ホバー時 */
+#pagetop:hover {
+    filter: hue-rotate(180deg);
+}
+
+/* ボタン押下時にスルスル動くように設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* スマホサイズでは非表示にする */
+@media (max-width: 767px) {
+    .pagetop2 {
+        display: none;
+    }
+}
+
+/* 画像と文字の重ね使用 */
+.pagetop2 {
+    position: relative;
+}
+.pagetop2 p {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #bbb;
+    font-size: 1rem;
+    margin: 0!important;
+    padding: 0!important;
+}
